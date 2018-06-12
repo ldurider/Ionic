@@ -7,7 +7,16 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+
+  nombre='Hola';
+  pass='';
   constructor(public navCtrl: NavController) {
+
+  }
+
+  validarFormulario(formulario){
+
+    console.log(formulario);
 
   }
 

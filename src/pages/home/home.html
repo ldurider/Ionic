@@ -15,4 +15,30 @@
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
+
+  <form (ngSubmit)="validarFormulario(formulario)" #formulario="ngForm">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-label>valid:{{passFormulario.valid}}</ion-label>
+        <ion-label>dirty:{{passFormulario.dirty}}</ion-label>
+        <ion-label>pristine:{{passFormulario.pristine}}</ion-label>
+        <ion-label>touched:{{passFormulario.touched}}</ion-label>
+        <ion-input type="text" [(ngModel)]="nombre" name="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input required minlength="3" type="password"[(ngModel)]="pass" name="pass" #passFormulario="ngModel"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <button ion-button type="submit">Button</button>
+
+  </form>
+
+
 </ion-content>
